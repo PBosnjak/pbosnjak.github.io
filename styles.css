@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap');
 
 body {
     justify-content: center;
@@ -213,7 +213,7 @@ input#open {
 .text {
     position: absolute;
     color: white;
-    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 30px;
     transition: .3s;
     width:300px;
@@ -226,10 +226,10 @@ input#open {
 .timer {
     position: absolute;
     color: white;
-    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 30px;
     top:-150px;
-    left:-90px; 
+    left:-70px; 
 }
 
 .open-transform-full {
