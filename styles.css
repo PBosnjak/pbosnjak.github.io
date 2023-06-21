@@ -6,7 +6,7 @@ body {
     height: 100vh;
     display: flex;
     background-color: #89cff0;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .jewellery-box {
