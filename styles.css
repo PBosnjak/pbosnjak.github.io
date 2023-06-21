@@ -21,6 +21,8 @@ input#open {
 
 .diamond-ring {
     position: relative;
+    transform: translateZ(90px);
+    z-index: 1;
 }
 
 .diamond {
@@ -117,6 +119,7 @@ input#open {
     top:-10px;
     transition: .1s;
     cursor: pointer;
+    transform: translateZ(100px);
 }
 
 .bottom {
@@ -130,6 +133,7 @@ input#open {
     top:40px;
     left:-70px;
     transition: .1s;
+    transform: translateZ(100px);
 }
 
 .bottom:before {
@@ -233,11 +237,11 @@ input#open {
 }
 
 .open-transform-full {
-    transform: translateY(-40px);
+    transform: translateY(-40px) translateZ(100px);
 }
 
 .bottom-transform-full {
-    transform: translateY(45px);
+    transform: translateY(45px) translateZ(100px);
 }
 
 .inner-top-transform-full {
@@ -258,11 +262,11 @@ input#open {
 }
 
 .open-transform-partial {
-    transform: translateY(-1px);
+    transform: translateY(-1px) translateZ(100px);
 }
 
 .bottom-transform-partial {
-    transform: translateY(5px);
+    transform: translateY(5px) translateZ(100px);
 }
 
 .inner-top-transform-partial {
