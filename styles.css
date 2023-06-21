@@ -243,6 +243,22 @@ input#open {
     opacity:1;
 }
 
+.open-transform-partial {
+    transform: translateY(-5px);
+}
+
+.bottom-transform-partial {
+    transform: translateY(10px);
+}
+
+.inner-top-transform-partial {
+    transform: rotateX(108deg);
+}
+
+.inner-bottom-transform-partial {
+    transform: rotateX(50deg);
+}
+
 /* 
 #open:checked + .open {
     transform: translateY(-40px);
