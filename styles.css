@@ -218,9 +218,18 @@ input#open {
     transition: .3s;
     width:300px;
     text-align: center;
-    top:-165px;
+    top:-105px;
     left:-130px;
     opacity:0;
+}
+
+.timer {
+    position: absolute;
+    color: white;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 30px;
+    top:-150px;
+    left:-90px; 
 }
 
 .open-transform-full {
@@ -241,6 +250,11 @@ input#open {
 
 .text-transform-full {
     opacity:1;
+    transform: translateY(-50px);
+}
+
+.timer-transform-full {
+    opacity:0;
 }
 
 .open-transform-partial {
@@ -257,6 +271,10 @@ input#open {
 
 .inner-bottom-transform-partial {
     transform: rotateX(50deg);
+}
+
+.text-transform-partial {
+    opacity:1;
 }
 
 /* 
