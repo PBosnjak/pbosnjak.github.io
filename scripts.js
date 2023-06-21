@@ -1,6 +1,15 @@
+const sh = "&scaron;"
+const zh = "&zcaron;"
+const velikozh = "	&Zcaron;";
+const mekoc = "&cacute;"
+const tvrdoc = "&ccaron;"
+const mekod = "&dstrok;"
+const tvrdod = "&ccaron;"
+
 $( ".jewellery-box" ).on( "click", function() {
     var timeLeft = getTimeLeft(); 
     if (timeLeft <= 0){
+        $("#message").html(getFinalMessage());
         $(".open").toggleClass( "open-transform-full" );
         $(".bottom").toggleClass( "bottom-transform-full" );
         $(".inner-top").toggleClass( "inner-top-transform-full" );
@@ -10,11 +19,22 @@ $( ".jewellery-box" ).on( "click", function() {
         return;   
     }
 
-    $(".open").toggleClass( "open-transform-partial" );
-    $(".bottom").toggleClass( "bottom-transform-partial" );
-    $(".inner-top").toggleClass( "inner-top-transform-partial" );
-    $(".inner-bottom").toggleClass( "inner-bottom-transform-partial" );
-    $(".text").toggleClass( "text-transform-partial" );
+    if (!$(".open").hasClass( "open-transform-partial" )){
+        $("#message").html(getRegularMessage());
+        $(".open").toggleClass( "open-transform-partial" );
+        $(".bottom").toggleClass( "bottom-transform-partial" );
+        $(".inner-top").toggleClass( "inner-top-transform-partial" );
+        $(".inner-bottom").toggleClass( "inner-bottom-transform-partial" );
+        $(".text").toggleClass( "text-transform-partial" );
+
+        setTimeout(function(){
+            $(".open").toggleClass( "open-transform-partial" );
+            $(".bottom").toggleClass( "bottom-transform-partial" );
+            $(".inner-top").toggleClass( "inner-top-transform-partial" );
+            $(".inner-bottom").toggleClass( "inner-bottom-transform-partial" );
+            $(".text").toggleClass( "text-transform-partial" );
+        }, 2000)
+    }
 });
 
 $( document ).ready(function() {
@@ -44,4 +64,34 @@ function getTimeLeft (){
     var now = new Date();  
     now = (Date.parse(now) / 1000);  
     return endTime - now;  
+}
+
+var regularMessages = [
+    "Ne jo" + sh + ".",
+    "Ne "+zh+"uri.",
+    "Kamo si po"+sh+"la?",
+    "Di je pri"+sh+"a?",
+    "Lagano me pokrij!",
+    "Bo"+zh+"e Klaudia.",
+    "Okani me se.",
+    velikozh+"uri polako.",
+    "A di?",
+    "Makar"+sh+"ta!",
+    "Sve u svoje vrijeme.",
+    "De skuliraj se.",
+    "Ohladi malo.",
+];
+var count = -1;
+
+function getRegularMessage(){    
+    if (count >= (regularMessages.length - 1))
+        count = 0;
+    else 
+        count++;
+    
+    return regularMessages[count]
+}
+
+function getFinalMessage(){
+    return "Klaudia, ho"+ mekoc+"e"+sh+" li se udati za mene?"
 }
