@@ -1,16 +1,20 @@
 $( ".jewellery-box" ).on( "click", function() {
+    var timeLeft = getTimeLeft(); 
+    if (timeLeft <= 0){
+        $(".open").toggleClass( "open-transform-full" );
+        $(".bottom").toggleClass( "bottom-transform-full" );
+        $(".inner-top").toggleClass( "inner-top-transform-full" );
+        $(".inner-bottom").toggleClass( "inner-bottom-transform-full" );
+        $(".text").toggleClass( "text-transform-full" );
+        $(".timer").toggleClass( "timer-transform-full" );
+        return;   
+    }
+
     $(".open").toggleClass( "open-transform-partial" );
     $(".bottom").toggleClass( "bottom-transform-partial" );
     $(".inner-top").toggleClass( "inner-top-transform-partial" );
     $(".inner-bottom").toggleClass( "inner-bottom-transform-partial" );
     $(".text").toggleClass( "text-transform-partial" );
-
-    // $(".open").toggleClass( "open-transform-full" );
-    // $(".bottom").toggleClass( "bottom-transform-full" );
-    // $(".inner-top").toggleClass( "inner-top-transform-full" );
-    // $(".inner-bottom").toggleClass( "inner-bottom-transform-full" );
-    // $(".text").toggleClass( "text-transform-full" );
-    // $(".timer").toggleClass( "timer-transform-full" );
 });
 
 $( document ).ready(function() {
@@ -18,11 +22,11 @@ $( document ).ready(function() {
 });
 
 function makeTimer() {  
-    var endTime = new Date("23 June 2023 00:00:00 GMT+02:00");    
-    endTime = (Date.parse(endTime) / 1000);  
-    var now = new Date();  
-    now = (Date.parse(now) / 1000);  
-    var timeLeft = endTime - now;  
+    var timeLeft = getTimeLeft(); 
+    if (timeLeft <= 0){
+        $("#timer").html("00:00:00:00");
+        return;   
+    }
     var days = Math.floor(timeLeft / 86400);   
     var hours = Math.floor((timeLeft - (days * 86400)) / 3600);  
     var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);  
@@ -32,4 +36,12 @@ function makeTimer() {
     if (minutes < "10") { minutes = "0" + minutes; }  
     if (seconds < "10") { seconds = "0" + seconds; }  
     $("#timer").html(days + ":" + hours + ":" + minutes + ":"+ seconds );       
-}  
+} 
+
+function getTimeLeft (){
+    var endTime = new Date("23 June 2023 00:00:00 GMT+02:00");    
+    endTime = (Date.parse(endTime) / 1000);  
+    var now = new Date();  
+    now = (Date.parse(now) / 1000);  
+    return endTime - now;  
+}
