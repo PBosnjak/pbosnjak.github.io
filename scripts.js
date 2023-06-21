@@ -1,4 +1,4 @@
-$( "#open" ).on( "click", function() {
+$( ".jewellery-box" ).on( "click", function() {
     $(".open").toggleClass( "open-transform-partial" );
     $(".bottom").toggleClass( "bottom-transform-partial" );
     $(".inner-top").toggleClass( "inner-top-transform-partial" );
