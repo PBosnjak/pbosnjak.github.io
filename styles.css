@@ -258,19 +258,21 @@ input#open {
 }
 
 .open-transform-partial {
-    transform: translateY(-5px);
+    transform: translateY(-1px);
 }
 
 .bottom-transform-partial {
-    transform: translateY(10px);
+    transform: translateY(5px);
 }
 
 .inner-top-transform-partial {
-    transform: rotateX(108deg);
+    transition: 10ms;
+    transform: rotateX(103deg);
 }
 
 .inner-bottom-transform-partial {
-    transform: rotateX(50deg);
+    transition: 10ms;
+    transform: rotateX(57deg);
 }
 
 .text-transform-partial {

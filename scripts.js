@@ -33,7 +33,7 @@ $( ".jewellery-box" ).on( "click", function() {
             $(".inner-top").toggleClass( "inner-top-transform-partial" );
             $(".inner-bottom").toggleClass( "inner-bottom-transform-partial" );
             $(".text").toggleClass( "text-transform-partial" );
-        }, 2000)
+        }, 1000)
     }
 });
 
