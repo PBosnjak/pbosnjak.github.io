@@ -120,6 +120,7 @@ input#open {
     transition: .1s;
     cursor: pointer;
     transform: translateZ(100px);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .bottom {
