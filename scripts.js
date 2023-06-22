@@ -1,10 +1,12 @@
 const sh = "&scaron;"
+const velikoSh = "&Scaron;"
 const zh = "&zcaron;"
 const velikozh = "	&Zcaron;";
 const mekoc = "&cacute;"
 const tvrdoc = "&ccaron;"
 const mekod = "&dstrok;"
-const tvrdod = "&ccaron;"
+const tvrdod = "&dcaron;"
+const velikotvrdoc = "&Ccaron;"
 
 $( ".jewellery-box" ).on( "click", function() {
     var timeLeft = getTimeLeft(); 
@@ -72,14 +74,21 @@ var regularMessages = [
     "Kamo si po"+sh+"la?",
     "Di je pri"+sh+"a?",
     "Lagano me pokrij!",
+    "De ne.",
     "Bo"+zh+"e Klaudia.",
     "Okani me se.",
     velikozh+"uri polako.",
     "A di?",
+    "Eee moja Klaudia...",
+    "Lako tebi.",
     "Makar"+sh+"ta!",
     "Sve u svoje vrijeme.",
     "De skuliraj se.",
     "Ohladi malo.",
+    velikotvrdoc+"o bolo?",
+    "Lubenica 20 Eura???",
+    velikoSh+"to si nervozna?",
+    velikoSh+"pricanje."
 ];
 var count = -1;
 
