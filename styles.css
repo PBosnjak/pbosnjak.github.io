@@ -263,16 +263,16 @@ input#open {
 }
 
 .open-transform-partial {
-    transform: translateY(-1px) translateZ(100px);
+    transform: translateY(-4px) translateZ(100px);
 }
 
 .bottom-transform-partial {
-    transform: translateY(5px) translateZ(100px);
+    transform: translateY(8px) translateZ(100px);
 }
 
 .inner-top-transform-partial {
     transition: 10ms;
-    transform: rotateX(103deg);
+    transform: rotateX(107deg);
 }
 
 .inner-bottom-transform-partial {
